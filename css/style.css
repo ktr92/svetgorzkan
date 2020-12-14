@@ -504,6 +504,7 @@ color: #526272;
 	text-align: left;
 	display: flex;
 	justify-content: space-between;
+	    box-shadow: 0 10px 20px -12px #25B757;
 }
 
 .menubtn__title {
@@ -532,8 +533,17 @@ color: #526272;
 	height: 46px;
 	line-height: 44px;	
 	top: 0;
-	left: 42px;
+	left: 0;
 	font-size: 16px;
+	padding: 0 42px;
+}
+
+.search button {
+	position: absolute;
+	right: 0;
+	width: 80px;
+	top: 0;
+	height: 45px;
 }
 
 .search__placeholder .link_green {
@@ -544,6 +554,7 @@ color: #526272;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	height: 41px;
 	
 }
 .login {
@@ -551,6 +562,7 @@ color: #526272;
 	border-left: 1px solid #E9E9E9;
 	border-right: 1px solid #E9E9E9;
 	width: 150px;
+	
 }
 
 .cart__value {
@@ -577,9 +589,29 @@ color: #526272;
 	background: #25B757;
 	border-radius: 32px;
 	display: block;
+	position: absolute;
+	left: 22px;
+	top: -3px;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 100%;
+	/* identical to box height, or 12px */
+	width: 30px;
+	height: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	color: #FFFFFF;
 }
 .cart {
-	
+	position: relative;
+	padding: 0 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 120px;
 }
 
 .headermain {
@@ -588,8 +620,14 @@ color: #526272;
 	justify-content: space-between;
 	
 }
+.cart__icon {
+	padding-right: 30px;
+	
+}
 
-
+.header__content {
+	padding: 15px 0;
+}
 
 
 
