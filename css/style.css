@@ -935,6 +935,10 @@ color: #526272;
 
 	position: relative;
 }
+.linkslist ul > li > a:hover {
+	opacity: 0.5;
+}
+
 .linkslist ul > li > a:after {
 	position: absolute;
 	content: "";
@@ -963,21 +967,168 @@ opacity: 0.5;
 }
 
 .login__exit a:hover svg g, .login__exit a:hover span {
+	opacity: 1;
+}
 
-opacity: 1;
+.mainmenu__wrapper {
+	padding: 36px 45px;
+	background: #fff;
+	display: none;
+}
+.categories__title {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 100%;
+	/* identical to box height, or 18px */
+	color: #526272;
+	margin-bottom: 11px;
+}
+
+hr {
+	height: 1px;
+	width: 100%;
+	background: #526272;
+	opacity: 0.2;
+	margin: 25px 0;
+	border: none;
+}
+
+.categories__links {
+	margin: 11px 0;
+}
+
+.categories__subtitle {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 100%;
+	/* identical to box height, or 16px */
+	color: #526272;
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+
+.categories__list > ul > li {
+	list-style: none;
+	padding: 2px 0;	
+}
+
+.categories__list > ul > li > a {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	/* identical to box height, or 16px */
+	color: #526272;
+	
 }
 
 
 
+.categories__all a span {
+	padding-right: 5px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 100%;
+	/* identical to box height, or 18px */
 
 
+	color: #526272;
 
+}
 
+.mainmenu__left {
+	border-right: 1px solid #E9E9E9;
+}
+.mainmenu__links > ul {
+	width: 320px;
+	background: #fff;
+}
 
+.mainmenu__links > ul > li {
+	list-style: none;
+	padding-bottom: 5px;
+	display: block;
+}
+.mainmenu__links > ul > li:last-child {
 
+	padding-bottom: 0;
+}
+.mainmenu__links > ul > li > a {
+	height: 38px;
+	line-height: 38px;
+	white-space: nowrap;
+	display: block;
+	padding: 0 38px 0 30px;
+	background: #F8F8F8;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 100%;
+	color: rgba(82, 98, 114, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
 
+.mainmenu__links > ul > li > a:hover {
+	background: #25B757;
+	color: #fff;
+}
+.mainmenu__links > ul > li > a:hover svg path {
+	fill: #fff;
+	opacity: 1;
+}
+.mainmenu__links > ul > li.active > a{
+	background: #25B757;
+	color: #fff;
+}
+.mainmenu__links > ul > li.active > a svg path {
+	fill: #fff;
+	opacity: 1;
+}
 
+.container__mainmenu {
+	position: relative;
+}
 
+.mainmenu {
+	position: absolute;
+	left: 15px;
+	top: 30px;
+	box-shadow: 10px 10px 40px rgba(62, 63, 67, 0.2);
+	border-radius: 5px;
+}
+.mainmenu.full {
+	width: 100%;
+}
+
+@media (min-width: 1000px) {
+	.mainmenu__wrapper.active {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 320px;
+		height: 100%;
+		overflow: hidden;
+		    width: 100%;
+	}
+	
+	.mainmenu__links ul > li > a:hover .mainmenu__wrapper {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 320px;
+		height: 100%;
+		overflow: hidden;
+		
+	} 
+	
+	
+	
+}
 
 
 .form__input input[type="text"],
@@ -1267,76 +1418,8 @@ input:disabled {
 	text-decoration: none;
 }
 
-.mainmenu nav {
-	height: 100%;
-}
-
-.mainmenu nav>ul {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	align-items: center;
-	height: 100%;
-}
-
-.mainmenu nav>ul>li {
-	height: 100%;
-	position: relative;
-}
-
-.mainmenu nav>ul>li>a {
-	font-size: 15px;
-	color: #fff;
-	font-weight: bold;
-	text-transform: uppercase;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0 20px;
-	height: 100%;
-	border-bottom: 3px solid #0077cc;
-}
-
 @media (min-width: 1024px) {
-	.mainmenu nav>ul>li>a:hover {
-		background: #0064ac;
-		border-bottom: 3px solid #db2955;
-	}
-	.mainmenu nav>ul>li.mainmenu__parent>a:hover {
-		background: #0064ac;
-		border-bottom: 3px solid #0064ac;
-	}
-}
 
-.mainmenu ul>li .fa-angle-down {
-	display: none;
-}
-
-.mainmenu nav>ul>li.active>a {
-	background: #0064ac;
-	border-bottom: 3px solid #db2955;
-}
-
-.header__menu {
-	background-color: #0077cc;
-}
-
-.mainmenu {
-	height: 50px;
-}
-
-.mainmenu__child {
-	padding: 5px 10px 15px 0;
-	display: none;
-	width: 720px;
-	position: absolute;
-	z-index: 9;
-	top: 50px;
-	left: 0;
-	background: #fff;
-	border-top: 3px solid #db2955;
-	box-shadow: 0px 2px 10px -2px #a2a2a2;
-	min-height: 305px;
 }
 
 

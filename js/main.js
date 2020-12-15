@@ -142,6 +142,28 @@ $(function () {
 		$('.login_tooltip').slideToggle();
 	});
 	
+	$(".mainmenu__links ul li").on({
+		'mouseenter': function () {
+			$(this).addClass('active');
+			if ($(this).find('.mainmenu__wrapper').length) {
+				$(this).find('.mainmenu__wrapper').addClass('active');
+				if ($('.mainmenu__wrapper').hasClass('active')) {
+					$('.mainmenu').css('width', '100%');
+					
+				}				
+			}
+		},
+		/* 'mouseleave': function () {
+			$(this).removeClass('active');
+			$(this).find('.mainmenu__wrapper').removeClass('active');
+			if ($('.mainmenu__wrapper').hasClass('active')) {
+					$('.mainmenu').css('width', '100%');
+				}	
+				else {
+					$('.mainmenu').css('width', 'initial');
+				}
+		} */
+	});
 	
 	
 	
