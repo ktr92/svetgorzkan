@@ -130,6 +130,22 @@ $(document).ready(function () {
 	});
 });
 $(function () {
+	
+	$('.location__content').click(function (event) {
+		$(this).toggleClass('active');
+		$('.location_tooltip').slideToggle();
+	});
+	
+	$('.login__link>a').click(function (event) {
+		event.preventDefault;
+		$(this).toggleClass('active');
+		$('.login_tooltip').slideToggle();
+	});
+	
+	
+	
+	
+	
 	$('.menumobile').click(function (event) {
 		$(this).toggleClass('active');
 		$('.mainmenu').slideToggle();
