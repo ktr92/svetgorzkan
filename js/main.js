@@ -1,5 +1,26 @@
 $(document).ready(function () {
 	
+	try {
+		$('.mainslider__slider').each(function () {
+			$(this).slick({
+				infinite: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				/* autoplay: true,
+				  autoplaySpeed: 3000,*/
+				arrows: false,
+				dots: true,
+				fade: true,
+				responsive: [{
+											
+				}]
+			});
+		});
+	} catch (err) {
+	}
+	
+	
+	
 	// position the div
 	var tbox = $('.search input[type="text"]'),
 		   pholder = $('.search__placeholder')
@@ -35,6 +56,25 @@ $(document).ready(function () {
 				/* autoplay: true,
 				  autoplaySpeed: 3000,*/
 				arrows: false,
+				dots: true,
+				/* dotsClass: 'mainslider__dots_slick',*/
+				responsive: [{
+											
+				}]
+			});
+		});
+	} catch (err) {
+	}
+	/* new WOW().init(); */
+	try {
+		$('.productslider__slider-five').each(function () {
+			$(this).slick({
+				infinite: true,
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				/* autoplay: true,
+				  autoplaySpeed: 3000,*/
+				arrows: true,
 				dots: true,
 				/* dotsClass: 'mainslider__dots_slick',*/
 				responsive: [{
@@ -116,7 +156,7 @@ $(function () {
 			if ($(this).find('.mainmenu__wrapper').length) {
 				$(this).find('.mainmenu__wrapper').addClass('active');
 				if ($('.mainmenu__wrapper').hasClass('active')) {
-					$('.mainmenu').css('width', '100%');
+					$('.mainmenu__content').css('width', '100%');
 					
 				}				
 			}
@@ -125,14 +165,25 @@ $(function () {
 			$(this).removeClass('active');
 			$(this).find('.mainmenu__wrapper').removeClass('active');
 			if ($('.mainmenu__wrapper').hasClass('active')) {
-					$('.mainmenu').css('width', '100%');
+					$('.mainmenu__content').css('width', '100%');
 				}	
 				else {
-					$('.mainmenu').css('width', 'initial');
+					$('.mainmenu__content').css('width', 'initial');
 					 hideSlider();
 				}
 		}
 	});
+	
+	$(".menubtn").on({
+		'mouseenter': function () {
+			$('.mainmenu').css('z-index', '3').addClass('active');		
+			
+		},
+		'mouseleave': function () {
+			$('.mainmenu').css('z-index', '-1').removeClass('active');		
+		}
+	});
+
 	
 	
 	
