@@ -487,7 +487,7 @@ color: #526272;
 }
 
 .btn_main {
-
+	white-space: nowrap;
 	padding: 18px 22px;
 	background: #25B757;
 	border-radius: 5px;
@@ -497,6 +497,8 @@ color: #526272;
 	text-align: center;
 	color: #FFFFFF;
 	   box-shadow: 0 10px 20px -12px #25B757;
+	   
+	   display: inline-block;
 }
 
 .btn_main:hover {
@@ -1907,6 +1909,7 @@ color: #526272;
 	line-height: 1;
 	font-weight: bold;
 	color: #fff;
+	white-space: nowrap;
 }
 
 
@@ -1982,6 +1985,135 @@ color: #526272;
 font-family: 'Gilroy-Medium';
 }
 
+
+.footer__item svg path {
+	fill: #EEEEEE;
+}
+.footer__item a.link {
+	color: #EEEEEE;
+}
+.footer__item a.link:after {
+   
+    border-bottom: 2px dotted #EEEEEE;
+
+}
+
+#footer {
+	background: #3B4353;
+}
+.logo2 {
+	margin-bottom: 26px;
+}
+.footer__main {
+	padding: 57px 0;
+}
+
+.footer__item .contacts {
+	display: block;
+}
+.footer__item .contacts__tel{
+	margin-bottom: 4px;
+}
+
+.fmenu__title {
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 27px;
+
+margin-bottom: 13px;
+color: #EEEEEE;
+}
+
+.fmenu__menu ul li {
+	list-style: none;
+	    line-height: 1;
+		min-height: 32px;
+		display: flex;
+	margin-bottom: 14px;
+	align-items: center;
+}
+.fmenu__menu ul li a {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1;
+
+
+	color: #EEEEEE;
+
+	opacity: 0.7;
+}
+
+.fmenu__menu ul li a:hover {
+
+	opacity: 1;
+}
+
+.footer__items {
+	display: flex;
+	
+	justify-content: space-between;
+}
+
+.fmenu {
+	max-width: 200px;
+}
+
+.qtitle {
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 100%;
+margin-bottom: 8px;
+text-align: right;
+
+color: #FFFFFF;
+}
+
+.qtext {
+	font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 100%;
+/* identical to box height, or 16px */
+
+display: flex;
+align-items: center;
+text-align: right;
+padding-bottom: 9px;
+color: #FFFFFF;
+}
+.qbutton {
+	text-align: right;
+	padding-top: 9px;
+}
+
+.btn_main3 {
+	text-align: right;
+	padding: 13px 26px;
+	box-shadow: none;
+	font-family: 'Gilroy-Medium';
+}
+.footer__line hr {
+	border-radius: 3px;
+	height: 2px;
+	background: #EEE;
+	opacity: 0.4;
+	margin: 0;
+}
+.footer__bottom {
+	padding: 36px 0;
+}
+.footer__bottom, .copy {
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+color: #EEEEEE;
+
+}
 
 @media (min-width: 1000px) {
 	.mainmenu__wrapper.active {
