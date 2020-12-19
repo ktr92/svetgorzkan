@@ -222,11 +222,23 @@ $(function () {
 		
 	});
 	
+	$('.search-mobile').click(function(e) {
+		e.preventDefault();
+		$('.search').toggleClass('search_open');
+		
+	});
+	
 	
 	
 	$('.closemenu').click(function (event) {
 		$('.topmenu').slideToggle();
 	});
+	
+	
+	
+	
+	
+	
 	$('.menufixed').click(function (event) {
 		$('.header__menu').slideToggle();
 	});
