@@ -73,6 +73,7 @@ $(document).ready(function () {
 				slidesToShow: 5,
 				slidesToScroll: 1,
 				arrows: true,
+				  centerPadding: '0',
 				dots: false,
 				centerPadding: 20,
 				responsive: [
@@ -222,9 +223,19 @@ $(function () {
 		
 	});
 	
-	$('.search-mobile').click(function(e) {
-		e.preventDefault();
+	
+	
+	$('.search-mobile_unactive').click(function (event) {
 		$('.search').toggleClass('search_open');
+		 $(this).hide();
+		$('.search-mobile_active').show();
+		
+	});
+	
+	$('.search-mobile_active').click(function (event) {
+		$('.search').toggleClass('search_open');
+			$(this).hide();
+		$('.search-mobile_unactive').show();
 		
 	});
 	
