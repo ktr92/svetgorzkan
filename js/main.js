@@ -72,15 +72,30 @@ $(document).ready(function () {
 				infinite: true,
 				slidesToShow: 5,
 				slidesToScroll: 1,
-				/* autoplay: true,
-				  autoplaySpeed: 3000,*/
 				arrows: true,
 				dots: false,
 				centerPadding: 20,
-				/* dotsClass: 'mainslider__dots_slick',*/
-				responsive: [{
-											
-				}]
+				responsive: [
+				 {
+				  breakpoint: 1385,
+				  settings: {
+					slidesToShow: 3,
+					
+				  }
+				},
+				{
+				  breakpoint: 1023,
+				  settings: {
+					slidesToShow: 3,
+				  }
+				},
+				{
+				  breakpoint: 720,
+				  settings: {
+					slidesToShow: 2,
+					}
+				}
+				]
 			});
 		});
 	} catch (err) {
