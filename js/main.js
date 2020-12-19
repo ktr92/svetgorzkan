@@ -148,7 +148,7 @@ $(function () {
 		$('.location_tooltip').slideToggle();
 	});
 	
-	$('.login__link>a').click(function (event) {
+	$('.login__content>a').click(function (event) {
 		event.preventDefault;
 		$(this).toggleClass('active');
 		$('.login_tooltip').slideToggle();
