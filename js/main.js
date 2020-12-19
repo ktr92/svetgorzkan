@@ -148,7 +148,7 @@ $(function () {
 		$('.location_tooltip').slideToggle();
 	});
 	
-	$('.login__content>a').click(function (event) {
+	$('.login__content').click(function (event) {
 		event.preventDefault;
 		$(this).toggleClass('active');
 		$('.login_tooltip').slideToggle();
@@ -204,10 +204,26 @@ $(function () {
 	
 	
 	
-	$('.menumobile').click(function (event) {
-		$(this).toggleClass('active');
-		$('.mainmenu').slideToggle();
+	$('.burger-mobile_unactive').click(function (event) {
+		
+		/* $('.topmenu').slideToggle().toggleClass('active');
+		 */$('.topmenu').slideToggle();
+		 $(this).hide();
+		$('.burger-mobile_active').show();
+		
 	});
+	
+	$('.burger-mobile_active').click(function (event) {
+	
+		/* $('.topmenu').slideToggle().toggleClass('active'); */
+		$('.topmenu').slideToggle();
+			$(this).hide();
+		$('.burger-mobile_unactive').show();
+		
+	});
+	
+	
+	
 	$('.closemenu').click(function (event) {
 		$('.topmenu').slideToggle();
 	});
