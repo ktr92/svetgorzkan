@@ -1099,11 +1099,10 @@ hr {
 .mainmenu__links > ul > li > div.mainmenu__lvl {
 		cursor: pointer;
 
-	height: 38px;
-	line-height: 38px;
-	white-space: nowrap;
+	min-height: 38px;
+	line-height: 1.2;
 	display: block;
-	padding: 0 38px 0 30px;
+	padding: 9px 38px 9px 30px;
 	background: #F8F8F8;
 	font-style: normal;
 	font-weight: bold;
@@ -1112,6 +1111,10 @@ hr {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.mainmenu__links > ul > li > div.mainmenu__lvl > span {
+	max-width: 85%;
 }
 
 .mainmenu__links > ul > li:hover > div.mainmenu__lvl {
@@ -2381,6 +2384,20 @@ color: #EEEEEE;
 
 
 @media (max-width: 1023px) {
+	.search-mobile.search-mobile_active {
+		display: none;
+	}
+	.search-mobile.search-mobile_unactive {
+		display: none;
+	}
+	.mainmenu__links > ul > li > div.mainmenu__lvl > span {
+		max-width: 70%;
+		white-space: normal;
+		    line-height: 1.1;
+	}
+	.mainmenu__links > ul {
+		padding-bottom: 57px;
+	}
 	
 	.mcategories__title a {
 		font-size: 14px;
@@ -3225,14 +3242,7 @@ color: #FFFFFF;
 	.newslist__items {
 		margin: 0;
 	}
-	.mainmenu__links > ul > li > div.mainmenu__lvl > span {
-		max-width: 70%;
-		white-space: normal;
-		    line-height: 1.1;
-	}
-	.mainmenu__links > ul {
-		padding-bottom: 57px;
-	}
+	
 	.categories__item_medium .categories__content {
 		padding: 7px 14px 13px 14px;
 	}
