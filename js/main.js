@@ -45,6 +45,16 @@ $(document).ready(function () {
 		if($(this).val() === '') pholder.show(); 
 	});
 	
+	$('.dselect_js').each(function() {
+		$(this).select2();
+	});
+	
+	/* $('.productlist__item').each(function() {
+		
+		$(this).css('height', '424px');
+	}); */
+	
+	
 	
 	/* new WOW().init(); */
 	try {
