@@ -48,7 +48,7 @@ $(document).ready(function () {
 	
 	/* new WOW().init(); */
 	try {
-		$('.productslider__slider').each(function () {
+		$('.productslider__slider-menu').each(function () {
 			$(this).slick({
 				infinite: true,
 				slidesToShow: 1,
@@ -69,15 +69,17 @@ $(document).ready(function () {
 	try {
 		$('.productslider__slider-five').each(function () {
 			$(this).slick({
-				infinite: true,
+				infinite: false,
 				slidesToShow: 5,
 				slidesToScroll: 1,
 				arrows: true,
 				  centerPadding: '0',
-				  arrows: false,
-				dots: false,
-				centerPadding: 20,
-				responsive: [
+				  nextArrow: $(this).parent().find('.productslider__right'),
+				  prevArrow: $(this).parent().find('.productslider__left'),
+				  arrows: true,
+					dots: false,
+					centerPadding: 20,
+					responsive: [
 				 {
 				  breakpoint: 1385,
 				  settings: {
@@ -103,13 +105,13 @@ $(document).ready(function () {
 	} catch (err) {
 	}
 	
-	
+	/* 
 	$(".productslider__right").click(function (e) {
 		$(this).parent().parent().find(".slick-slider").slick("slickNext");
 	});
 	$(".productslider__left").click(function (e) {
 		$(this).parent().parent().find(".slick-slider").slick("slickPrev");
-	});
+	}); */
 	
 	$("input[type=tel]").mask("+7 (999) 999-99-99");
 	/* if ($(window).width() > 767) {
@@ -157,17 +159,17 @@ $(function () {
 	});
 	
 	function showSlider() {
-		$('.productslider__container .slick-slider').css('opacity', '1');
+		$('.productslider__slider-menu.slick-slider').css('opacity', '1');
 	} 
 	function hideSlider() {
-		$('.productslider__container .slick-slider').css('opacity', '0');
+		$('.productslider__slider-menu.slick-slider').css('opacity', '0');
 	} 
 	if ($(window).width() > 1023) {
 		$(".mainmenu__links ul li").on({
 			'mouseenter': function () {
-				$(this).find('.productslider__slider').slick('refresh');
-				
-				setTimeout(showSlider,	'600');
+				$(this).find('.productslider__slider-menu').slick('refresh');
+			
+				setTimeout(showSlider,	'300');
 				
 							
 				$(this).addClass('active');
