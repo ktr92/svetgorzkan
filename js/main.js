@@ -345,4 +345,37 @@ $(function () {
 
 	});
 	
+	$('.mask-button').on('click', function() {
+	
+
+		$(this).siblings('.dtext').animate({
+				height: $('.dtext').get(0).scrollHeight
+			}, 1000, function(){
+				$(this).height('auto');
 });
+		$(this).siblings('.dtext').find('.mask-hidden').hide();
+		
+		$(this).hide();
+	});
+	
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
