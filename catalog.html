@@ -16,6 +16,8 @@
 		<link rel="stylesheet" href="/css/custom.css">
 		<link href="/css/select2.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="/css/style.css?v=1">
+		<script type="text/javascript" src="//yastatic.net/jquery/2.1.1/jquery.min.js"></script>	
+		<script type="text/javascript" src="/js/jquery-ui.js"></script>		
 	</head>
 	<body>
 		<header id="header" class="header">
@@ -693,7 +695,261 @@
 					</div>
 					<div class="catalogpage">
 						<div class="catalogpage__content">
-							<div class="catalogpage__aside"></div>
+							<div class="catalogpage__aside">
+								<aside>
+									<div class="filter">
+										<div class="filter__content">
+											<form action="">
+												<div class="filter__items">
+													<div class="filter__item filter__item_open">
+														<div class="filter__header">
+															<span>Цена, ₽</span>
+															<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#526272"/></svg>
+														</div>
+														<div class="filter__form">
+															<div class="filter__price">
+																<div class="sliderCont">
+																		<div id="slider"></div>
+																</div>
+																<div class="formCost">
+																	<div class="formCost__inputs">
+																		<div class="formCost__price_left">
+																			<label for="minCost"></label> 
+																			<input type="text" id="minCost" value="500" placeholder="">
+																		</div>
+																		<div class="formCost__price_right">
+																			<label for="maxCost"></label> 
+																			<input type="text" id="maxCost" value="7500" placeholder="">
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														
+														<script>
+															/* <фильтр по цене> */
+																$('input#maxCost').on('focusin', function(){
+																	$(this).val("");
+																});
+																
+																$('input#minCost').on('focusin', function(){
+																	$(this).val("");
+																});
+																
+																try {
+
+																jQuery("#slider").slider({
+																	min: 500,
+																	max: 7500,
+																	values: [500,7500],
+																	range: true,
+																	stop: function(event, ui) {
+																		jQuery("input#minCost").val(jQuery("#slider").slider("values",0));
+																		jQuery("input#maxCost").val(jQuery("#slider").slider("values",1));
+																		
+																	},
+																	slide: function(event, ui){
+																		jQuery("input#minCost").val(jQuery("#slider").slider("values",0));
+																		jQuery("input#maxCost").val(jQuery("#slider").slider("values",1));
+																	}
+																});
+
+																jQuery("input#minCost").change(function(){
+
+																	var value1=jQuery("input#minCost").val();
+																	var value2=jQuery("input#maxCost").val();
+
+																	if(parseInt(value1) > parseInt(value2)){
+																		value1 = value2;
+																		jQuery("input#minCost").val(value1);
+																	}
+																	jQuery("#slider").slider("values",0,value1);	
+																});
+
+																	
+																jQuery("input#maxCost").change(function(){
+																		
+																	var value1=jQuery("input#minCost").val();
+																	var value2=jQuery("input#maxCost").val();
+																	
+																	if (value2 > 7500) { value2 = 7500; jQuery("input#maxCost").val(7500)}
+
+																	if(parseInt(value1) > parseInt(value2)){
+																		value2 = value1;
+																		jQuery("input#maxCost").val(value2);
+																	}
+																	jQuery("#slider").slider("values",1,value2);
+																});
+
+
+
+																	jQuery('input').keypress(function(event){
+																		var key, keyChar;
+																		if(!event) var event = window.event;
+																		
+																		if (event.keyCode) key = event.keyCode;
+																		else if(event.which) key = event.which;
+																	
+																		if(key==null || key==0 || key==8 || key==13 || key==9 || key==46 || key==37 || key==39 ) return true;
+																		keyChar=String.fromCharCode(key);
+																		
+																		if(!/\d/.test(keyChar))	return false;
+																	
+																	});
+																} catch (err) {
+																	
+																};
+																	
+																/* </фильтр по цене> */	
+														</script>
+														
+													</div>
+													<div class="filter__item filter__item_open">
+														<div class="filter__header">
+															<span>Размер</span>
+															<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#526272"/></svg>
+														</div>
+														<div class="filter__form">
+															<div class="filter__checkbox">
+																<div class="dcheckbox">
+																	<label for="filter11" class="dcheckbox__label"><span>
+																		<input type="checkbox" id="filter11">
+																		<span class="dcheckbox__text">10”-20”</span>
+																		</span>
+																	</label>																	
+																</div>
+																<div class="dcheckbox">
+																	<label for="filter12" class="dcheckbox__label"><span>
+																		<input type="checkbox" checked id="filter12">
+																		<span class="dcheckbox__text">10”-20”</span>
+																		</span>
+																	</label>																	
+																</div>
+																<div class="dcheckbox">
+																	<label for="filter13" class="dcheckbox__label"><span>
+																		<input type="checkbox" id="filter13">
+																		<span class="dcheckbox__text">10”-20”</span>
+																		</span>
+																	</label>																	
+																</div>
+																<div class="dcheckbox">
+																	<label for="filter14" class="dcheckbox__label"><span>
+																		<input type="checkbox" checked id="filter14">
+																		<span class="dcheckbox__text">10”-20”</span>
+																		</span>
+																	</label>																	
+																</div>
+																<div class="dcheckbox">
+																	<label for="filter15" class="dcheckbox__label"><span>
+																		<input type="checkbox" id="filter15">
+																		<span class="dcheckbox__text">110”-120”</span>
+																		</span>
+																	</label>																	
+																</div>
+																
+																
+																
+																
+															</div>
+															
+														</div>
+													</div>
+													<div class="filter__item filter__item_close">
+														<div class="filter__header">
+															<span>Мощность</span>
+															<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#526272"/></svg>
+														</div>
+														<div class="filter__form">
+															<div class="filter__checkbox">
+																<div class="dcheckbox">
+																	<label for="filter21" class="dcheckbox__label"><span>
+																		<input type="checkbox" id="filter21">
+																		<span class="dcheckbox__text">I</span>
+																		</span>
+																	</label>																	
+																</div>
+																<div class="dcheckbox">
+																	<label for="filter22" class="dcheckbox__label"><span>
+																		<input type="checkbox" checked id="filter22">
+																		<span class="dcheckbox__text">II</span>
+																		</span>
+																	</label>																	
+																</div>
+																<div class="dcheckbox">
+																	<label for="filter23" class="dcheckbox__label"><span>
+																		<input type="checkbox" id="filter23">
+																		<span class="dcheckbox__text">III</span>
+																		</span>
+																	</label>																	
+																</div>
+																<div class="dcheckbox">
+																	<label for="filter24" class="dcheckbox__label"><span>
+																		<input type="checkbox" checked id="filter24">
+																		<span class="dcheckbox__text">IV</span>
+																		</span>
+																	</label>																	
+																</div>
+																<div class="dcheckbox">
+																	<label for="filter25" class="dcheckbox__label"><span>
+																		<input type="checkbox" id="filter25">
+																		<span class="dcheckbox__text">V</span>
+																		</span>
+																	</label>																	
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="filter__item filter__item_open">
+														<div class="filter__header">
+															<span>Размер</span>
+															<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#526272"/></svg>
+														</div>
+														<div class="filter__form">
+															<div class="filter__checkbox">
+																<div class="dcheckbox">
+																	<label for="filter31" class="dcheckbox__label"><span>
+																		<input type="checkbox" id="filter31">
+																		<span class="dcheckbox__text">I</span>
+																		</span>
+																	</label>																	
+																</div>
+																<div class="dcheckbox">
+																	<label for="filter32" class="dcheckbox__label"><span>
+																		<input type="checkbox" checked id="filter32">
+																		<span class="dcheckbox__text">II</span>
+																		</span>
+																	</label>																	
+																</div>
+																<div class="dcheckbox">
+																	<label for="filter33" class="dcheckbox__label"><span>
+																		<input type="checkbox" id="filter33">
+																		<span class="dcheckbox__text">III</span>
+																		</span>
+																	</label>																	
+																</div>
+																<div class="dcheckbox">
+																	<label for="filter34" class="dcheckbox__label"><span>
+																		<input type="checkbox" checked id="filter34">
+																		<span class="dcheckbox__text">IV</span>
+																		</span>
+																	</label>																	
+																</div>
+																<div class="dcheckbox">
+																	<label for="filter35" class="dcheckbox__label"><span>
+																		<input type="checkbox" id="filter35">
+																		<span class="dcheckbox__text">V</span>
+																		</span>
+																	</label>																	
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</aside>
+							</div>
 							<div class="catalogpage__main">
 								<div class="productlist">
 									<div class="productlist__items">
@@ -1504,9 +1760,10 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="//yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+		
 		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="/js/slick.min.js"></script>
+		
 		<script src="/libs/lightbox/js/lightbox.js" type="text/javascript"></script>
 		<script src="/js/wow.min.js"></script>
 		<script src="/js/maskedinput.js"></script>

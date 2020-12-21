@@ -86,7 +86,6 @@ $(document).ready(function () {
 				  centerPadding: '0',
 				  nextArrow: $(this).parent().find('.productslider__right'),
 				  prevArrow: $(this).parent().find('.productslider__left'),
-				  arrows: true,
 					dots: false,
 					centerPadding: 20,
 					responsive: [
@@ -329,16 +328,21 @@ $(function () {
 	
 	
 	(function($) {
-$(function() {
+	$(function() {
 
-	$('ul.tabs__caption_js').on('click', 'li:not(.active)', function() {
-		$(this)
-			.addClass('active').siblings().removeClass('active')
-			.closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+		$('ul.tabs__caption_js').on('click', 'li:not(.active)', function() {
+			$(this)
+				.addClass('active').siblings().removeClass('active')
+				.closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+		});
+
 	});
-
-});
-})(jQuery);
+	})(jQuery);
 	
+	$('.filter__header').on('click', function() {
+		$(this).parent().toggleClass('filter__item_open');
+		$(this).siblings('.filter__form').slideToggle();
+
+	});
 	
 });
