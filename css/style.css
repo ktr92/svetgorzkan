@@ -2924,7 +2924,9 @@ span.dcheckbox__text {
 	display: none;
 }
 
-
+.filter__close {
+	display: none;
+}
 	
 @media (max-width: 1415px) {
 	.headercontacts__main {		
@@ -4277,8 +4279,9 @@ color: #FFFFFF;
 	}
 	.filter__close {
 		text-align: right;
+		display: block;
 	}
-
+	
 }
 
 @media (max-width: 480px) {}
