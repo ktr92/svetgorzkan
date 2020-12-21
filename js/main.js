@@ -342,20 +342,75 @@ $(function () {
 	$('.filter__header').on('click', function() {
 		$(this).parent().toggleClass('filter__item_open');
 		$(this).siblings('.filter__form').slideToggle();
+	
 
 	});
 	
 	$('.mask-button').on('click', function() {
-	
-
 		$(this).siblings('.dtext').animate({
 				height: $('.dtext').get(0).scrollHeight
 			}, 1000, function(){
 				$(this).height('auto');
-});
+		});
 		$(this).siblings('.dtext').find('.mask-hidden').hide();
 		
 		$(this).hide();
+	});
+	
+/* 	
+	if ($(window).width() < 720) {	
+		$(window).scroll(function () {
+			let hei = $('.filter__content').height() - $(window).height() + 72;
+			
+            if ($(window).scrollTop() > hei) {
+				
+                $(".filter__buttons").addClass("absolute");
+            } else {
+                $(".filter__buttons").removeClass("absolute");
+            }
+
+        });
+		
+		
+		$(window).on('click', function() {
+			$(this).parent().toggleClass('filter__item_open');
+			$(this).siblings('.filter__form').slideToggle();
+			let hei = $('.filter__content').height() - $(window).height() + 72;
+			
+            if ($(window).scrollTop() > hei) {
+				
+                $(".filter__buttons").addClass("absolute");
+            } else {
+                $(".filter__buttons").removeClass("absolute");
+            }
+		});
+	}
+	 */
+	
+	function checkHeight() {		
+		let hei2 = $('.filter__content').height() - $(window).height() + 72;
+		
+		if ($(window).scrollTop() > hei2) {
+			$(".filter__buttons").addClass("absolute");
+		} else {
+			$(".filter__buttons").removeClass("absolute");
+		}
+	};
+	
+	if ($(window).width() < 720) {		
+		$(window).scroll(function () {
+			checkHeight()
+        });
+		$(window).on('click', function() {
+			setTimeout(checkHeight(),900);
+		});	
+	}
+	
+	$('.buttonfilter').on('click', function() {
+		$('.filter').slideToggle();
+	});
+	$('.filter__close').on('click', function() {
+		$('.filter').slideToggle();
 	});
 	
 });
