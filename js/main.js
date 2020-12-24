@@ -19,6 +19,12 @@ $(document).ready(function () {
 	} catch (err) {
 	}
 	
+	$('.radiotype2').each(function() {
+		var radioheight;
+		radioheight = 29 * ($('.radiotype2 > label').length / 2);
+		$(this).css('height', radioheight);
+	});
+	
 	$('.productimg__images').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
