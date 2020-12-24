@@ -26,7 +26,18 @@ $(document).ready(function () {
 		arrows: false,
 		infinite: true,
 		fade: true,
-		asNavFor: '.productimg__previews'
+		asNavFor: '.productimg__previews',
+		responsive: [
+				
+				{
+				  breakpoint: 1023,
+				  settings: {
+					
+					dots: true
+				  }
+				},
+				
+				]
 	});
 	
 	$('.productimg__previews').slick({

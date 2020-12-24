@@ -1372,7 +1372,7 @@ color: #526272;
 }
 
 
-.productslider .slick-dots li button {
+.slick-dots li button {
 	background: url(/images/dots.png);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -1380,14 +1380,14 @@ color: #526272;
 	overflow: hidden;
 }
 
-.productslider .slick-dots li.slick-active button {
+.slick-dots li.slick-active button {
 	background: url(/images/dots-active.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	text-indent: -9999px;
 	overflow: hidden;
 }
-.productslider .slick-dots {
+.slick-dots {
 	bottom: -45px;
 }
 .mainslider .slick-dots li button {
@@ -4228,6 +4228,11 @@ input.quantity-minus {
 
 }
 
+.productfitches {
+    display: flex;
+    align-items: center;
+}
+
 
 @media (max-width: 1415px) {
 	.headercontacts__main {		
@@ -4238,6 +4243,46 @@ input.quantity-minus {
 }
 
 @media (max-width: 1385px) {
+	.productpage__right {
+		padding-left: 25px;
+	}
+	.buyblock__cart .btn_cart {
+		padding: 0 15px;
+		font-size: 14px;
+	}
+.radiotype1 span.radiotype__text {
+	padding: 9px 15px;
+	font-size: 14px;
+}
+.radiotype2 span.radiotype__text {
+	font-size: 14px;
+}
+.productpage__right h1 {
+	font-size: 22px;
+}
+.productpage__left {
+    width: 520px;
+}
+.productfitches__text {
+	font-size: 11px;
+}
+.productfitches__content {
+    padding-left: 5px;
+}
+
+.buyblock .productcard__oldprice {
+	    top: 4px
+}
+.link_blue {
+	font-size: 12px;
+}
+
+.location__main {
+	width: 150px;
+}
+.headercontacts__main {
+    width: 294px;
+}
 	.logo svg{
 		width: 165px;
 	}
@@ -4382,8 +4427,98 @@ input.quantity-minus {
 	
 }
 
-
 @media (max-width: 1023px) {
+	.radiotype2 {
+		height: initial;
+	}
+	.buyblock__price {
+		width: 100%;
+	}
+	.buyblock {
+		flex-wrap: wrap;
+	}
+	
+	.buyblock__cart .btn_cart {
+		padding: 12px 22px;
+		font-size: 14px;
+	}
+	.productinfo__items {
+		display: block;
+	}
+	.params__item {
+		width: 100%;
+	}
+	/**/
+		
+	.article {
+		font-size: 12px;
+	}
+	.variantsname {
+		margin-bottom: 9px;
+		font-size: 12px;
+		
+	}
+
+	.variants {
+		margin: 8px 0 18px 0;
+	}
+
+
+	.productfitches__text {
+		font-size: 12px;
+	}
+
+	 .radiotype2 span.radiotype__text {
+	
+		font-size: 12px;
+
+		
+	 }
+	  .radiotype1 span.radiotype__text {
+	
+		font-size: 12px;
+		padding: 8px 14px;
+	 }
+	 
+	 
+
+	/**/
+	.productpage__left {
+		width: 100%;
+		padding-bottom: 15px;
+	}
+	.productimg__images {
+		height: initial;
+	}
+	.productimg__image {
+		height: 300px;
+		padding: 60px 0;
+
+	}
+	.productimg_container {
+		height: initial;
+		padding-bottom: 30px;
+	}
+	
+	.productpage__right h1 {
+		font-size: 18px;
+		margin-bottom: 9px;
+	}
+	.productinfo__item {
+		margin-right: 14px;
+	}
+	
+	.productpage__main {
+		display: block;
+	}
+	
+	.productimg__previewscontainer {
+		display: none;
+	}
+	.productimg__current {
+		width: 100%;
+		margin: 0;
+	}
 	.halfblock > div {
 		width: 100%;
 	}
@@ -5082,6 +5217,66 @@ input.quantity-minus {
 }
 
 @media (max-width:719px) {
+	.productpage__right {
+		padding-left: 0;
+	}
+	.producttabs__header {
+		display: none;
+	}
+	.params__item {
+		padding: 0;
+	}
+	.params__items {
+		margin: 0;
+	}
+	
+	.productimg__current .productcard__sticker {
+		font-size: 12px;
+		padding: 4px 10px;
+		height: initial;
+		line-height: initial;
+	}
+	
+	.productimg__image {
+		height: 238px;
+		padding: 38px 0;
+	}
+	.productimg__current .slick-dots li.slick-active button, .productimg__current .slick-dots li button, .productimg__current .slick-dots li, .productimg__current .slick-dots li button:before {
+		width: 10px;
+		height: 10px;
+		background-size: contain;
+		margin: 0 2px;
+	}
+	.radiotype2 span.radiotype__text:before {
+		width: 16px;
+		height: 16px;
+	}
+	.buyblock .productcard__oldprice {
+		right: -29px;
+		top: -5px;
+	}
+	.variants {
+		margin: 8px 0 4px 0;
+	}
+	.buyblock__cart .btn_cart {
+		font-size: 12px;
+		padding: 9px 24px;
+	}
+	input.quantity-field {
+		max-width: 30px;
+		
+	}
+	.quantity input[type="button"] {
+		font-size: 22px;
+		}
+		
+	.productinfo__item {
+		width: 100%;
+		margin-bottom: 12px;
+	}
+	.productpage__bottom {
+		padding: 5px 0 5px 0;
+	}
 	.subtitle {
 		font-size: 14px;
 	}
