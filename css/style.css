@@ -5277,6 +5277,15 @@ input.quantity-minus {
 	.productpage__bottom {
 		padding: 5px 0 5px 0;
 	}
+	.params__name, .params__value {
+		font-size: 12px;
+	}
+	.params__item {
+		margin-bottom: 18px;
+	}
+	.producttabs__content {
+		display:block;
+	}
 	.subtitle {
 		font-size: 14px;
 	}
