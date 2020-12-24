@@ -19,6 +19,31 @@ $(document).ready(function () {
 	} catch (err) {
 	}
 	
+	$('.productimg__images').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		asNavFor: '.productimg__previews'
+	});
+	
+	$('.productimg__previews').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		fade: false,
+		dots: false,
+		vertical: true,
+		verticalSwiping: true,
+		centerMode: false,
+		asNavFor: '.productimg__images',
+
+	});
+		$(".productimg__preview").click(function(e){
+          e.preventDefault();
+		    actIndex = $(this).attr('data-slick-index');
+		  var slider = $( '.productimg__images' );
+			slider[0].slick.slickGoTo(parseInt(actIndex));
+        });
+	
 	
 	
 	// position the div
@@ -412,6 +437,9 @@ $(function () {
 	$('.filter__close').on('click', function() {
 		$('.filter').slideToggle();
 	});
+	
+	
+
 	
 });
 
