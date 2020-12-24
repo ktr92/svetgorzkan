@@ -25,6 +25,7 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		arrows: false,
 		infinite: true,
+		fade: true,
 		asNavFor: '.productimg__previews'
 	});
 	
@@ -480,6 +481,20 @@ $(function () {
 	$('.quantity').on('click', '.quantity-minus', function(e) {
 	  decrementValue(e);
 	});
+	
+	if ($(window).width() > 719) {	
+		(function($) {
+		$(function() {
+
+			$('.producttabs__header ul').on('click', 'li:not(.active)', function() {
+				$(this)
+					.addClass('active').siblings().removeClass('active')
+					.closest('div.producttabs').find('div.producttabs__content').removeClass('active').eq($(this).index()).addClass('active');
+			});
+
+		});
+		})(jQuery);
+	}
 
 	
 });
