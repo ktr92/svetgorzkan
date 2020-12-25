@@ -4233,6 +4233,267 @@ input.quantity-minus {
     align-items: center;
 }
 
+.leftblock {
+	width: 45%;
+}
+
+.borderblock {
+	padding: 60px 50px;
+	background: #F8F8F8;
+	border: 3px solid #FFFFFF;
+	box-sizing: border-box;
+	box-shadow: -5px -5px 20px #FFFFFF, 5px 5px 20px #DFDFDF;
+	border-radius: 8px;
+	margin-bottom: 70px;
+}
+.icblock__title {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 27px;
+	margin-bottom: 12px;
+	color: #3B4353;
+	 font-family: 'Gilroy-Medium';
+	 padding-right: 15px;
+}
+.icblock__text {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 100%;
+	color: #3B4353;
+	
+}
+
+.icblock__content {
+	padding-left: 14px;
+	width: 100%;
+}
+
+.icblock {
+	margin-bottom: 22px;
+	display: flex;
+}
+
+.icblock__img {
+	width: 24px;
+	text-align: center;
+}
+
+.icblock__subtitle {
+	 font-family: 'Gilroy-Medium';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	color: #3B4353;
+	padding-top: 25px;
+	margin-bottom: 12px;
+}
+
+.icblock__subtext {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 100%;
+	color: #3B4353;
+	opacity: 0.8;
+	
+}
+
+.icblock__tels {
+	padding-top: 25px;
+	display: flex;
+	margin: 0 -25px;
+	margin-bottom: 30px;
+}
+.icblock__tel {
+	padding: 0 25px;
+}
+
+.rightblock {
+    width: 55%;
+	padding-left: 58px;
+}
+
+.icblock__number a {
+	 font-family: 'Gilroy-Medium';
+	font-style: normal;
+	font-size: 22px;
+	line-height: 26px;
+	color: #25B757;
+}
+.icblock__bordered {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.icblock__bordered:after {
+    content: "";
+    height: 0;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    display: bloc;
+    padding: 2px;
+    width: 100%;
+    border-bottom: 2px dotted rgba(82,98,114, 0.5);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.icblock__name {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 100%;
+	color: #3B4353;
+}
+
+.btn_icon2 {
+	padding: 7px 28px;
+	min-width: 78px;
+	min-height: 38px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5px 0 15px 0;
+}
+
+.icblock__buttons {
+	display: flex;
+}
+.icblock__button {
+	margin-right: 8px;
+}
+.icblock__bordered {
+	margin-bottom: 40px;
+}
+
+.maillink {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	border-bottom: 1px solid #25B757;
+	color: #25B757;
+}
+.maillink:hover {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	border-bottom: 1px solid #25B757;
+	color: #25B757;
+	opacity: 0.5;
+}
+.maillink:focus, .maillink:visited {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	border-bottom: 1px solid #25B757;
+	color: #25B757;
+	opacity: 0.7;
+}
+
+.icblock__flex {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 14px;
+	margin-top: 0;
+	max-width: 510px;
+}
+
+.icblock__fleft {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	color: #3B4353;
+}
+
+.icblock__flexft_sm {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: #3B4353;
+
+}
+
+.contacttabs__header {
+	text-align: center;
+}
+
+.btn_tabs {
+	padding: 25px 36px;
+	margin: 10px 4px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 100%;
+	color: #526272;
+	display: inline-block;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 1px solid transparent;
+}
+.btn_tabs:hover {
+	background: rgba(37, 183, 87, 0.4);
+	border: 1px solid #25B757;
+	box-sizing: border-box;
+	border-radius: 5px;
+		color: #fff;
+}
+
+.btn_tabs:hover  svg path {
+fill: #fff;
+}
+
+.btn_tabs:focus, .btn_tabs:visited {
+		color: #fff;
+	background: #25B757;
+		box-shadow: 0 10px 20px -12px #25B757;
+}
+.btn_tabs span {
+    padding-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn_tabs svg path{
+	fill: rgb(82,98,114,1);
+}
+
+.btn_tabs.active svg path {
+	fill: #fff;
+}
+
+.contacttabs__header {
+	margin-bottom: 50px;
+}
+
+.btn_tabs.active {
+	
+	color: #fff;
+	background: #25B757;
+		box-shadow: 0 10px 20px -12px #25B757;
+
+}
+.contacttabs__content {
+	display: none;
+	border: 3px solid #FFFFFF;
+	box-sizing: border-box;
+	box-shadow: 15px 15px 50px #DFDFDF;
+	border-radius: 5px;
+}
+.contacttabs__content.active {
+	display: block;
+}
+.contacttabs__wrapper {
+	padding-bottom: 70px;
+}
 
 @media (max-width: 1415px) {
 	.headercontacts__main {		

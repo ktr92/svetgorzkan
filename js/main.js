@@ -514,6 +514,19 @@ $(function () {
 		$(this).next('.producttabs__main').slideToggle().toggleClass('active');
 	});
 	}
+	
+	
+	(function($) {
+		$(function() {
+
+			$('.contacttabs__header ul').on('click', 'li:not(.active)', function() {
+				$(this)
+					.addClass('active').siblings().removeClass('active')
+					.closest('div.contacttabs').find('div.contacttabs__content').removeClass('active').eq($(this).index()).addClass('active');
+			});
+
+		});
+		})(jQuery);
 
 	
 });
