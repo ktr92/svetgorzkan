@@ -4426,6 +4426,14 @@ input.quantity-minus {
 .contacttabs__header {
 	text-align: center;
 }
+.contactblock {
+	background: #fff;
+	padding: 60px 0;
+}
+
+.rowblock {
+	margin: 0;
+}
 
 .btn_tabs {
 	padding: 25px 36px;
@@ -4495,6 +4503,11 @@ fill: #fff;
 	padding-bottom: 70px;
 }
 
+.icblock__number a {
+	white-space: nowrap;
+}
+
+
 @media (max-width: 1415px) {
 	.headercontacts__main {		
 		width: 354px;
@@ -4504,6 +4517,23 @@ fill: #fff;
 }
 
 @media (max-width: 1385px) {
+	.borderblock {
+	padding: 60px 30px;
+	} 
+	
+	.icblock__title {
+		font-size: 18px;
+	}
+	.icblock__subtitle {
+		font-size: 16px;
+	}
+	.icblock__name {
+		font-size: 14px;
+	}
+	.icblock__text {
+			font-size: 14px;	
+	}
+	
 	.productpage__right {
 		padding-left: 25px;
 	}
@@ -4689,6 +4719,29 @@ fill: #fff;
 }
 
 @media (max-width: 1023px) {
+	.icblock__tels {
+		margin: 0;
+		flex-wrap: wrap;
+		padding-top: 0;
+	}
+	.icblock__tel {
+		padding: 0;
+		padding-bottom: 15px;
+	}
+	.icblock__bordered {
+		display: block;
+	}
+.icblock__name {
+	padding-bottom: 5px;
+}
+
+.icblock__button .btn_icon {
+	height: 100%;
+	max-height: 38px;
+}
+	.icblock__flex {
+		display: block;
+	}
 	.radiotype2 {
 		height: initial;
 	}
@@ -5478,6 +5531,101 @@ fill: #fff;
 }
 
 @media (max-width:719px) {
+	.btn_tabs {
+		padding: 13px 21px;
+		margin: 10px 0px;
+	}
+	.contacttabs__header {
+		margin-bottom: 14px;
+	}
+	.contacttabs__content {
+		height: 250px;	
+	}.contacttabs__content oframe {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	.contactblock {
+		padding: 30px 0;
+	}
+	.btn_tabs span {
+		font-size: 12px;
+	}
+	.leftblock {
+		width: 100%;
+	}
+	.rightblock {
+		width: 100%;
+		padding-left: 0;
+	}
+	.contacttabs__wrapper {
+    padding-bottom: 20px;
+}
+	.borderblock {
+		padding: 0;
+		background: #F8F8F8;
+		border: none;
+		box-sizing: border-box;
+		box-shadow: none;
+		border-radius: 8px;
+		margin-bottom: 30px;
+	}
+.icblock__img {
+	height: 19px;
+}
+.icblock__img  svg {
+	max-height: 100%;
+}
+.icblock__text {
+	font-size: 12px;
+}
+
+.icblock {
+	margin-bottom: 32px;
+}
+.icblock__subtitle {
+	font-size: 14px;
+	    margin-bottom: 8px;
+		padding-top: 12px;
+}
+	.icblock__subtext {
+	font-size: 12px;
+}
+.icblock__number a {
+	font-size: 18px;
+}
+.icblock__tel {
+	
+	max-width: 150px;
+}
+.icblock__bordered {
+	margin-bottom: 5px;
+}
+
+hr.hr_desktop {
+	display: none;
+}
+
+.icblock_last {
+    margin-bottom: 12px;
+}
+.icblock__fleft {
+	font-size: 14px;
+}
+.icblock__flexft_sm {
+	font-size: 12px;
+}
+
+.maillink {
+	font-size: 12px;
+}
+
+.icblock__content .icblock__content {
+	padding-left: 0;
+}
+
+
+
+
 	.productfitches__text b {
 		white-space: nowrap;
 	}
