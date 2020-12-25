@@ -159,6 +159,38 @@ $(document).ready(function () {
 		});
 	} catch (err) {
 	}
+	try {
+		$('.newslist__items_slider').each(function () {
+			$(this).slick({
+				infinite: false,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				arrows: true,
+				  centerPadding: '0',
+				  nextArrow: $(this).parent().find('.newslist__right'),
+				  prevArrow: $(this).parent().find('.newslist__left'),
+					dots: false,
+					centerPadding: 20,
+					responsive: [
+				 
+				{
+				  breakpoint: 1023,
+				  settings: {
+					slidesToShow: 2,
+				  }
+				},
+				{
+				  breakpoint: 720,
+				  settings: {
+					slidesToShow: 1,
+					}
+				}
+				]
+			});
+		});
+	} catch (err) {
+	}
+	
 	
 	/* 
 	$(".productslider__right").click(function (e) {
