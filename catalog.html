@@ -249,14 +249,14 @@
 							<div class="mainmenu__list">
 								<div class="mainmenu__links">
 									<ul>
-										<li>
+										<li class="active">
 											<div  class="mainmenu__lvl">
 												<span>Дорожные знаки</span>
 												<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M5.32211 7L0 1.79759L1.83894 0L9 7L1.83894 14L0 12.2024L5.32211 7Z" fill="#526272"/>
 												</svg>
 											</div>
-											<div class="mainmenu__wrapper">
+											<div class="mainmenu__wrapper active">
 												<div class="mainmenu__cols">
 												<div class="mainmenu__left">
 													<div class="mcategories">
@@ -1815,32 +1815,87 @@
 				</div>
 			</div>
 		</footer>
-		<!-- Модальные окно - Заказать звонок -->
-		<div id="callback" class="modal fade">
+		
+		
+			
+		<!-- Модальные окно -->
+		<div id="modalCallback" class="modal modal_callback fade">
 			<div class="modal-dialog">
 				<div class="modal-content">
-					<button type="button" class="close" id="modal_zvonok_close" data-dismiss="modal" aria-hidden="true"><img src="/images/close.png"></button>
+					<button type="button" class="close" id="modal_zvonok_close" data-dismiss="modal" aria-hidden="true">
+						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g opacity="0.3">
+						<path d="M13.4645 10.8787C14.1785 11.5927 14.1785 12.7504 13.4645 13.4645C12.7504 14.1785 11.5927 14.1785 10.8787 13.4645L0.535534 3.12132C-0.178511 2.40728 -0.178511 1.24958 0.535534 0.535534C1.24958 -0.178511 2.40728 -0.178511 3.12132 0.535534L13.4645 10.8787Z" fill="#526272"/>
+						<path d="M3.12132 13.4645C2.40727 14.1785 1.24958 14.1785 0.535534 13.4645C-0.178511 12.7504 -0.178511 11.5927 0.535534 10.8787L10.8787 0.535535C11.5927 -0.17851 12.7504 -0.17851 13.4645 0.535535C14.1785 1.24958 14.1785 2.40728 13.4645 3.12132L3.12132 13.4645Z" fill="#526272"/>
+						</g>
+						</svg>
+
+					</button>
 					<div class="modal-body">
 						<div class="modal__content">
-							<div class="modal-title">Заказать звонок</div>
+							<div class="modal__title">Связаться с нами</div>
+							<div class="modal__subtitle">Введите некоторую информацию, и наш менеджер свяжеться с вами в ближайшее время!</div>
 							<div class="modal__form">
-								<form>
-									<div class="form-group">
-										<input type="text" name="" placeholder="Ваше имя">
-									</div>
-									<div class="form-group">
-										<input type="tel" name="" placeholder="+7 (___) ___-__-__">
-									</div>
-									<div class="form-group form-group_last">
-										<button class="btn btn_main" type="submit">Отправить заявку</button>
-									</div>
-								</form>
+								<div class="form">
+									<form>
+										<div class="form__inputs">
+											<div class="form__input">
+												<input type="text" name="" placeholder="Ваше имя" class="input_name">
+											</div>
+											<div class="form__input">
+												<input type="tel" name="" placeholder="Телефон" class="input_error">
+											</div>
+											<div class="form__input">
+												<input type="email" name="" placeholder="E-mail" class="input_completed" value="completed">
+											</div>
+											<div class="form__input">
+												<textarea name="" id="" rows="4" placeholder="Здесь может быть ваш комментарий..."></textarea>
+											</div>
+											
+											<div class="form__input form__input_last">
+												<button type="submit" class="btn_main btn_main2">Отправить</button>
+											</div>
+										</div>
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- Модальные окно -->
+		<div id="modalCart" class="modal modal_cart fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<button type="button" class="close" id="modal_zvonok_close" data-dismiss="modal" aria-hidden="true">
+						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g opacity="0.3">
+						<path d="M13.4645 10.8787C14.1785 11.5927 14.1785 12.7504 13.4645 13.4645C12.7504 14.1785 11.5927 14.1785 10.8787 13.4645L0.535534 3.12132C-0.178511 2.40728 -0.178511 1.24958 0.535534 0.535534C1.24958 -0.178511 2.40728 -0.178511 3.12132 0.535534L13.4645 10.8787Z" fill="#526272"/>
+						<path d="M3.12132 13.4645C2.40727 14.1785 1.24958 14.1785 0.535534 13.4645C-0.178511 12.7504 -0.178511 11.5927 0.535534 10.8787L10.8787 0.535535C11.5927 -0.17851 12.7504 -0.17851 13.4645 0.535535C14.1785 1.24958 14.1785 2.40728 13.4645 3.12132L3.12132 13.4645Z" fill="#526272"/>
+						</g>
+						</svg>
+
+					</button>
+					<div class="modal-body">
+						<div class="modal__content">
+							<div class="modalcart">
+								<div class="modalcart__image"><img src="/images/img1.jpg" alt=""></div>
+								<div class="modalcart__name">Однопутная железная дорога</div>
+								<div class="modalcart__text">Был добавлен в корзину в размере: <span>3 шт.</span></div>
+								<div class="modalcart__buttons">
+									<div class="modalcart__button"><a href="" class="btn_border">Смотреть еще...</a></div>
+									<div class="modalcart__button"><a href="" class="btn_main btn_main2">Оформить заказ</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+		
 		
 		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="/js/slick.min.js"></script>
@@ -1850,5 +1905,8 @@
 		<script src="/js/maskedinput.js"></script>
 		<script src="/js/select2.min.js"></script>
 		<script type="text/javascript" src="/js/main.js"></script>
+		
+		
+		
 	</body>
 </html>

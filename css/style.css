@@ -1171,7 +1171,7 @@ hr {
 	position: absolute;
 	 left: 15px;
 	top: 30px;
-
+width: 100%;
 	box-shadow: 10px 10px 40px rgba(62, 63, 67, 0.2);
 	border-radius: 5px;
 }
@@ -3390,7 +3390,9 @@ body.modal-open {
 	/* background-color: rgba(0,0,0,0.2); */
 	background: linear-gradient(180deg, rgba(82, 98, 114, 0.35) 0%, rgba(82, 98, 114, 0) 36.46%), linear-gradient(90deg, rgba(82, 98, 114, 0.5) 0%, rgba(82, 98, 114, 0) 100%), url(.jpg);
 }
-
+.btn_mainsel {
+	display: none;
+}
 
 .pagecover__title {
 	max-width: 700px;
@@ -5653,7 +5655,9 @@ fill: #fff;
     margin-bottom: 36px;
     color: #526272;
 }
-	
+	.location__main {
+        width: 100%;
+  }
 }
 
 
@@ -6826,6 +6830,42 @@ color: #FFFFFF;
 
 	.catalogtext {
 		padding: 10px 0 60px 0;
+	}
+	  .location__main {
+			width: 100%;
+	  }
+	.tabsblock.tabsblock_index .tabs__caption{
+		display: none;
+	}
+	.btn_mainsel {
+		width: 183px;
+		height: 40px;
+		padding: 12px 14px 12px 18px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 10px auto;
+		background-image: url(/images/vect12.png);
+		background-position: right 18px center;
+		background-repeat: no-repeat;
+	}
+	.btn_mainsel .tabs__count {
+		
+		font-style: normal;
+		font-weight: bold;
+		font-size: 8px;
+		
+		color: #fff;
+
+	}
+	
+	
+	.btn_mainsel .tabs__name {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 100%;
+		color: #FFFFFF;
 	}
 
 }
