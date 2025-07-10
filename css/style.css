@@ -1373,7 +1373,7 @@ color: #526272;
 
 
 .slick-dots li button {
-	background: url(/images/dots.png);
+	background: url(images/dots.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	text-indent: -9999px;
@@ -1381,7 +1381,7 @@ color: #526272;
 }
 
 .slick-dots li.slick-active button {
-	background: url(/images/dots-active.png);
+	background: url(images/dots-active.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	text-indent: -9999px;
@@ -1391,7 +1391,7 @@ color: #526272;
 	bottom: -45px;
 }
 .mainslider .slick-dots li button {
-	background: url(/images/dots2.png);
+	background: url(images/dots2.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	text-indent: -9999px;
@@ -1399,7 +1399,7 @@ color: #526272;
 }
 
 .mainslider .slick-dots li.slick-active button {
-	background: url(/images/dots2-active.png);
+	background: url(images/dots2-active.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	text-indent: -9999px;
@@ -2734,13 +2734,13 @@ span.dcheckbox__text {
 
 
 .dcheckbox label:hover .dcheckbox__text:before {
-	background-image: url(/images/check1.png);
+	background-image: url(images/check1.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 .dcheckbox input[type=checkbox]:checked + .dcheckbox__text:before {
-   background-image: url(/images/check2.png);
+   background-image: url(images/check2.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	border-color: #25B757;
@@ -3028,19 +3028,19 @@ span.dcheckbox__text {
 	
 	
 .form input[type="text"].input_name {
-	background-image: url(/images/input_name.png);
+	background-image: url(images/input_name.png);
 	background-position: left 19px center;
 }
 .form input[type="tel"] {
-	background-image: url(/images/input_phone.png);
+	background-image: url(images/input_phone.png);
 	background-position: left 21px center;
 }
 .form input[type="email"] {
-	background-image: url(/images/input_email.png);
+	background-image: url(images/input_email.png);
 	background-position: left 18px center;
 }
 .form textarea {
-	background-image: url(/images/input_comment.png);
+	background-image: url(images/input_comment.png);
 	background-position: left 19px top 16px;
 }
 
@@ -3652,7 +3652,7 @@ ul.listcheck li:after {
 	left: 0;
 	top: 5px;
 	background: none;
-	background-image: url(/images/check3.png);
+	background-image: url(images/check3.png);
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -3825,7 +3825,7 @@ background: #fff;
 }
 /*.radiotype1 input[type=radio]:checked + .radiotype1__text:before {
 
-   background-image: url(/images/check2.png);
+   background-image: url(images/check2.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	border-color: #25B757;
@@ -3927,13 +3927,13 @@ background: #fff;
 
 
 .radiotype2 label:hover .radiotype__text:before {
-	background-image: url(/images/radio2.png);
+	background-image: url(images/radio2.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .radiotype2 input[type=radio]:checked + .radiotype__text:before {
 
-   background-image: url(/images/radio3.png);
+   background-image: url(images/radio3.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	border-color: #25B757;
@@ -5822,7 +5822,7 @@ hr.hr_desktop {
 		color: rgba(82,98,114,0.5);
 		padding: 12px 0;
 		border-bottom: 1px solid rgba(59,67,83,0.3);
-		background-image: url(/images/ptoducttabs1.png);
+		background-image: url(images/ptoducttabs1.png);
 		background-position: right center;
 		background-repeat: no-repeat;
 	}
@@ -5832,7 +5832,7 @@ hr.hr_desktop {
 	.producttabs__content h2.active {
 		color: #25B757;
 		border-bottom: 5px solid #25B757;
-		background-image: url(/images/ptoducttabs2.png);
+		background-image: url(images/ptoducttabs2.png);
 		background-position: right center;
 		background-repeat: no-repeat;
 	}
@@ -6845,7 +6845,7 @@ color: #FFFFFF;
 		justify-content: space-between;
 		align-items: center;
 		margin: 10px auto;
-		background-image: url(/images/vect12.png);
+		background-image: url(images/vect12.png);
 		background-position: right 18px center;
 		background-repeat: no-repeat;
 	}
@@ -6903,7 +6903,7 @@ color: #FFFFFF;
 }
 
 .check label:before {
-	background: url(/images/checkbox.png) left center no-repeat;
+	background: url(images/checkbox.png) left center no-repeat;
 	content: "";
 	width: 16px;
 	height: 16px;
@@ -6912,7 +6912,7 @@ color: #FFFFFF;
 }
 
 .check input[type=checkbox]:checked+label:before {
-	background: url(/images/checkbox_checked.png) left center no-repeat;
+	background: url(images/checkbox_checked.png) left center no-repeat;
 }
 
 
@@ -6968,7 +6968,7 @@ color: #FFFFFF;
 	-webkit-appearance: none;
 	/* Safari and Chrome */
 	appearance: none;
-	background-image: url(/images/selct.png);
+	background-image: url(images/selct.png);
 	background-repeat: no-repeat;
 	background-position: right 5px center;
 	border: 1px solid #cccccc;
@@ -7003,7 +7003,7 @@ color: #FFFFFF;
 	top: 0;
 	bottom: 0;
 	margin: auto;
-	background-image: url(/images/accordeon_down.png);
+	background-image: url(images/accordeon_down.png);
 	background-position: center;
 	width: 17px;
 	height: 100%;
@@ -7017,7 +7017,7 @@ color: #FFFFFF;
 	top: 0;
 	bottom: 0;
 	margin: auto;
-	background-image: url(/images/accordeon_up.png);
+	background-image: url(images/accordeon_up.png);
 	background-position: center;
 	width: 17px;
 	height: 100%;
